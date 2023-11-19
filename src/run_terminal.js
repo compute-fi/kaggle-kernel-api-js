@@ -4,7 +4,7 @@ export function runTerminalCommands(commands) {
   commands.forEach(command => {
     try {
       const result = execSync(command, { encoding: 'utf-8' });
-      console.log("COMMAND EXECUTED", result)
+      console.log("COMMAND EXECUTED", command)
       data = result;
     } catch (error) {
       console.error(`Error running command ${command}: ${error.message}`);
